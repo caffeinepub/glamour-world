@@ -2,28 +2,24 @@ import { useEffect, useRef } from "react";
 
 const IMAGES = [
   {
-    src: "/assets/generated/gallery-1.dim_600x500.jpg",
-    alt: "Beautiful client after treatment",
+    src: "/assets/uploads/WhatsApp-Image-2026-03-08-at-21.50.05-1.jpeg",
+    alt: "Facial treatment at Glamour World",
   },
   {
-    src: "/assets/generated/service-bridal.dim_600x400.jpg",
-    alt: "Bridal makeup transformation",
+    src: "/assets/uploads/WhatsApp-Image-2026-03-08-at-21.50.03-2.jpeg",
+    alt: "Back bleach treatment",
   },
   {
-    src: "/assets/generated/service-hair.dim_600x400.jpg",
-    alt: "Professional hair styling",
+    src: "/assets/uploads/WhatsApp-Image-2026-02-24-at-17.08.09-3.jpeg",
+    alt: "Face clean up treatment",
   },
   {
-    src: "/assets/generated/gallery-2.dim_600x500.jpg",
-    alt: "Relaxing pedicure treatment",
+    src: "/assets/uploads/WhatsApp-Image-2026-03-08-at-21.50.15-4.jpeg",
+    alt: "Facial mask treatment",
   },
   {
-    src: "/assets/generated/service-manicure.dim_600x400.jpg",
-    alt: "Elegant nail manicure",
-  },
-  {
-    src: "/assets/generated/gallery-3.dim_600x500.jpg",
-    alt: "Luxurious hair spa",
+    src: "/assets/uploads/WhatsApp-Image-2026-02-25-at-21.12.49-5.jpeg",
+    alt: "Client after treatment",
   },
 ];
 
