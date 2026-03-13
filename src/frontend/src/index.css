@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Glamour World - Blush Pink & Champagne Gold palette */
+    --background: 0.98 0.005 60;
+    --foreground: 0.22 0.025 15;
+
+    --card: 1 0 0;
+    --card-foreground: 0.22 0.025 15;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.22 0.025 15;
+
+    /* Blush Rose primary */
+    --primary: 0.68 0.14 8;
+    --primary-foreground: 1 0 0;
+
+    /* Champagne gold secondary */
+    --secondary: 0.82 0.09 80;
+    --secondary-foreground: 0.25 0.04 50;
+
+    --muted: 0.94 0.015 15;
+    --muted-foreground: 0.52 0.04 15;
+
+    /* Deep rose accent */
+    --accent: 0.58 0.18 10;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.9 0.025 15;
+    --input: 0.9 0.025 15;
+    --ring: 0.68 0.14 8;
+
+    --radius: 0.75rem;
+
+    /* Chart colors */
+    --chart-1: 0.68 0.14 8;
+    --chart-2: 0.82 0.09 80;
+    --chart-3: 0.58 0.18 10;
+    --chart-4: 0.75 0.08 40;
+    --chart-5: 0.45 0.12 8;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.008 60;
+    --sidebar-foreground: 0.22 0.025 15;
+    --sidebar-primary: 0.68 0.14 8;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.015 15;
+    --sidebar-accent-foreground: 0.22 0.025 15;
+    --sidebar-border: 0.9 0.025 15;
+    --sidebar-ring: 0.68 0.14 8;
+
+    /* Custom brand tokens */
+    --gold: 0.78 0.1 80;
+    --gold-light: 0.9 0.07 80;
+    --blush: 0.92 0.04 10;
+    --rose-deep: 0.48 0.2 10;
+    --petal: 0.96 0.02 10;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* Fade-in animation for scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-wa {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.65 0.2 145 / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px oklch(0.65 0.2 145 / 0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+.delay-400 {
+  transition-delay: 0.4s;
+}
+.delay-500 {
+  transition-delay: 0.5s;
+}
+
+/* Floating WhatsApp pulse */
+.wa-pulse {
+  animation: pulse-wa 2s infinite;
+}
+
+/* Gold shimmer divider */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(var(--gold)),
+    transparent
+  );
+}
+
+/* Service card hover */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px oklch(0.68 0.14 8 / 0.15);
+}
+
+/* Gallery hover */
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+.gallery-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
